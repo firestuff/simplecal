@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimpleCal</title>
+		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="50000">
+		<link rel="stylesheet" href="simplecal.css">
+		<link rel="icon" href="icon.png">
+	</head>
+	<body>
+		<div id="current">
+			<div id="currentName"></div>
+			<div id="currentLeft"></div>
+		</div>
+		<div id="next">
+			<div id="nextTitle">Next:</div>
+			<div id="nextName"></div>
+		</div>
+
+		<script src="simplecal.js"></script>
+
+		<script async defer src="https://apis.google.com/js/api.js"
+				    onload="this.onload=function() {}; handleClientLoad();"
+				    onreadystatechange="if (this.readyState === 'complete') this.onload();">
+		</script>
+	</body>
+</html>

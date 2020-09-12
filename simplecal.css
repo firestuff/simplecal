@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500&display=swap');
+
+body {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	background: black;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.blinkSlow {
+	animation: blink 1.0s infinite;
+}
+
+.blinkFast {
+	animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+	0% { filter: none; }
+	49% { filter: none; }
+	50% { filter: invert(); }
+	100% { filter: invert(); }
+}
+
+#current, #next {
+	visibility: hidden;
+}
+
+#current {
+	flex-grow: 4;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#next {
+	flex-grow: 1;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#currentLeft {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 10vmin;
+}
+
+
+#currentName {
+	text-align: center;
+	font-size: 15vmin;
+	mix-blend-mode: difference;
+}
+
+#nextTitle {
+	font-size: 7vmin;
+}
+
+#nextName {
+	text-align: center;
+	font-size: 10vmin;
+}
+
+.event, .break {
+	visibility: visible !important;
+}
+
+.event {
+	color: #e28659;
+}
+
+.break {
+	color: #f9cf41;
+}
