@@ -195,7 +195,7 @@ function initClient() {
 			return loadEvents();
 		} else {
 			gapi.auth2.getAuthInstance().signIn();
-			return;
+			return Promise.reject('signin required');
 		}
 	}).then((response) => {
 		events = response.result.items;
